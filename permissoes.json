@@ -1,0 +1,13 @@
+[
+    {
+        "user": "felipe",
+        "permissoes": [
+            {
+                "arquivo": "teste.png",
+                "ler": false,
+                "escrever": false,
+                "excluir": false
+            }
+        ]
+    }
+]
