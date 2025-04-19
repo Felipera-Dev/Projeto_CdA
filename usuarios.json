@@ -1,8 +1,10 @@
 [
-    [
-        {
-            "user": "felipe",
-            "senha": "123"
-        }
-    ]
+    {
+        "user": "felipe",
+        "senha": "123"
+    },
+    {
+        "user": "roger",
+        "senha": "321"
+    }
 ]

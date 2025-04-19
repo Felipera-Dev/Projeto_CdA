@@ -3,8 +3,43 @@
         "user": "felipe",
         "permissoes": [
             {
-                "arquivo": "teste.png",
+                "arquivo": "foto.png",
+                "ler": true,
+                "escrever": false,
+                "excluir": false
+            },
+            {
+                "arquivo": "codigo.c",
                 "ler": false,
+                "escrever": true,
+                "excluir": false
+            },
+            {
+                "arquivo": "arquivo.bat",
+                "ler": false,
+                "escrever": false,
+                "excluir": true
+            }
+        ]
+    },
+    {
+        "user": "roger",
+        "permissoes": [
+            {
+                "arquivo": "foto.png",
+                "ler": false,
+                "escrever": false,
+                "excluir": false
+            },
+            {
+                "arquivo": "codigo.c",
+                "ler": false,
+                "escrever": false,
+                "excluir": false
+            },
+            {
+                "arquivo": "arquivo.bat",
+                "ler": true,
                 "escrever": false,
                 "excluir": false
             }
