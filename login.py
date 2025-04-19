@@ -89,30 +89,28 @@ def login():
             opcaologin = input(" 1 - Listar Arquivos | 2 - Ler Arquivo | 3 - Escrever Arquivo | 4 - Excluir Arquivo  | 5 - Sair  ")
             if opcaologin == "1":
                 print("Listar Arquivos")
-                ListarArquivos()
+                ListarArquivos(user_login)
             elif opcaologin == "2":
                 VerificarPerm(user_login, "ler")   
             elif opcaologin == "3":
                 VerificarPerm(user_login, "escrever")   
             elif opcaologin == "4":
-                VerificarPerm(user_login, "excluir")                        
+                VerificarPerm(user_login, "excluir")
+            elif opcaologin == "5":
+                print("Deslogando...")
             else:
                 print("Opção inválida")
     else:
         print("Nome ou Senha incorretos")
 
-def ListarArquivos():
+def ListarArquivos(user_login):
     dadosPerm = LerDadosPerm()
-    arquivos_set = set() # Usando um set para evitar duplicar arquivos 
-
-    for user in dadosPerm:
-        for permissao in user["permissoes"]:
-            arquivos_set.add(permissao["arquivo"])
-
     print("Arquivos:")
-    for arquivo in arquivos_set:
-        print(arquivo)
-        
+    for user in dadosPerm:
+        if user["user"] == user_login:
+            for permissao in user["permissoes"]:
+                 print(permissao["arquivo"])
+
 def VerificarPerm(user_login, acao):
     dadosPerm = LerDadosPerm()
     print(acao,"arquivo------------------------------------------")
